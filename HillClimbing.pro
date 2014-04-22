@@ -14,9 +14,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    myqlabel.cpp
+    myqlabel.cpp \
+    graph.cpp \
+    headers/avl_tree.cpp \
+    headers/nodo.cpp
 
 HEADERS  += mainwindow.h \
-    myqlabel.h
+    myqlabel.h \
+    graph.h \
+    headers/avl_tree.h \
+    headers/nodo.h
 
 FORMS    += mainwindow.ui

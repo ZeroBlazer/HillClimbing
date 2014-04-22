@@ -1,0 +1,38 @@
+#ifndef GRAPH_H
+#define GRAPH_H
+
+#include <vector>
+#include <headers/avl_tree.h>
+
+template <typename T>
+class Edge;
+
+template <typename T>
+class Vertex {
+public:
+    Vertex();
+    void addEdge(Edge<T> &);
+private:
+    T m_value;
+    vector<Edge<T> > m_edges;
+};
+
+template <typename T>
+class Edge {
+public:
+    Edge(Vertex<T> &);
+private:
+    Vertex<T> *m_pointer;
+};
+
+template <typename T>
+class Graph
+{
+public:
+    Graph();
+    
+private:
+    AVL_tree<Vertex<T> > m_graph;
+};
+
+#endif // GRAPH_H
